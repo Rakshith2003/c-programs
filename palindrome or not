@@ -25,3 +25,35 @@ else
 printf("not a palindrome");
         }
 }
+
+2nd way:
+#include<stdio.h>
+#include<string.h>
+int palin(char *str,int len)
+{
+int start=0;
+int end=len-1;
+    while(start<end)
+     {
+        if(str[start]!=str[end])
+            {
+            return 0;
+            }
+     }
+return 1;
+}
+void main()
+{
+char str1[]="malayalam";
+//char str1[]="palidrome";
+int len=strlen(str1);
+  if(palin(str1,len))
+    {
+      printf("its a palidrome ");
+    }
+else
+    {
+      printf("not a palindrome");
+    }
+}
+
