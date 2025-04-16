@@ -26,9 +26,10 @@ int main()
 int myarr[]={8,2,4,7,9,5};
 int len=sizeof(myarr)/sizeof(myarr[0]);
 revarr(myarr,len);
-for(i=0;i<len;i++)
+for(int i=0;i<len;i++)
 {
 printf("%d\n",myarr[i]);
+}
 //printarr(myarr,len);
 return 0;
 }
