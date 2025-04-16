@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+void revarr(char *arr,int len)
+{
+    //int max=arr[0];
+    int start=0;
+    int end=len-1;
+     while(start<end)
+    {
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+    }
+//return *arr;
+}
+int main()
+{
+char myarr[]="Alice";
+int len=strlen(myarr);
+revarr(myarr,len);
+
+printf("%s\n",myarr);
+
+return 0;
+}
