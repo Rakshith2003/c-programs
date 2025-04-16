@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+#include<ctype.h>
+
+int palincheck(char *str)
+{
+    char clean[100];
+    int j=0;
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(!isspace(str[i]))
+        {
+
+            clean[j++]=tolower(str[i]);
+        }
+
+    }
+    clean[j]='\0';
+    int start=0;
+    int end=j-1;
+    while(start<end)
+    {
+        if(clean[start]!=clean[end])
+        {
+            return 0;
+        }
+        start++;
+        end--;
+    }
+    return 1;
+}
+
+int main()
+{
+    //char str[]="malayalam";
+    //char str[]="palindrome";
+    //char str[]="Malayalam";
+    char str[]="Race Car";
+    //int len=strlen(str);
+    if(palincheck(str))
+    {
+        printf("its a palindrome");
+    }
+    else
+    {
+        printf("not a palindrome");
+    }
+    return 0;
+}
