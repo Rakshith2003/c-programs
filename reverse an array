@@ -1,0 +1,34 @@
+#include <stdio.h>
+int revarr(int *arr,int len)
+{
+    //int max=arr[0];
+    int start=0;
+    int end=len-1;
+     while(start<end)
+    {
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+        start++;
+        end--;
+    }
+return *arr;
+}
+/*void printarr(int *arr,int len)
+    {
+    for(int i=0;i<len;i++)
+    {
+     printf("%d\n",arr[i]);
+    }
+}*/
+int main() 
+{
+int myarr[]={8,2,4,7,9,5};
+int len=sizeof(myarr)/sizeof(myarr[0]);
+revarr(myarr,len);
+for(i=0;i<len;i++)
+{
+printf("%d\n",myarr[i]);
+//printarr(myarr,len);
+return 0;
+}
